@@ -1,0 +1,12 @@
+- hosts: 'local'
+  connection: local
+  roles:
+    - base
+    - homebrew
+#    - { role: homebrew, tags: [homebrew] }
+#    - { role: anyenv, tags: [anyenv] }
+#    - { role: gem, tags: [gem] }
+#    - { role: dotfiles, tags: [dotfiles] }
+#    - { role: go, tags: [go] }
+#    - { role: php, tags: [php] }
+

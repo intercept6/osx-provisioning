@@ -1,0 +1,9 @@
+- name: Add homebrew cask
+  homebrew_tap: name=homebrew/cask state=present
+
+- name: Install cask packages
+  homebrew_cask:
+    name={{ item.name }}
+    state={{ item.state | default('installed') }}
+  with_items:
+    - "{{ homebrew_cask_packages }}"

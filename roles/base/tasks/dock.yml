@@ -1,0 +1,25 @@
+- name: Dock tilesize
+  osx_defaults:
+    domain: com.apple.dock
+    key: tilesize
+    type: float
+    value: 60
+    state: present
+
+- name: Dock orientation
+  osx_defaults:
+    domain: com.apple.dock
+    key: orientation
+    type: string
+    value: left
+    state: present
+  notify: Restart Dock
+
+- name: Dock autohide
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: TRUE
+    state: present
+  notify: Restart Dock
